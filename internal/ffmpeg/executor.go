@@ -2,8 +2,9 @@ package ffmpeg
 
 import (
 	"context"
-	"errors"
+	"fmt"
 	"os/exec"
+	"strings"
 
 	"example.com/videolab/internal/video"
 )
@@ -26,10 +27,14 @@ func NewExecutor(runner Runner) *Executor {
 	return &Executor{runner: runner}
 }
 
-func (executor *Executor) Execute(ctx context.Context, _ string, command video.Command) error {
-	_, err := executor.runner.Run(ctx, command.Program, command.Args...)
+func (executor *Executor) Execute(ctx context.Context, path string, command video.Command) error {
+	output, err := executor.runner.Run(ctx, command.Program, command.Args...)
 	if err != nil {
-		return errors.New("command failed")
+		detail := strings.TrimSpace(string(output))
+		if detail == "" {
+			detail = err.Error()
+		}
+		return fmt.Errorf("ffmpeg command failed for %s: %s", path, detail)
 	}
 	return nil
 }
