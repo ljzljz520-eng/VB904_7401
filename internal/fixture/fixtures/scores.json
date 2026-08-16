@@ -1,0 +1,11 @@
+[
+  {"scene": "seaside", "filter": "balanced", "score": 82},
+  {"scene": "seaside", "filter": "cinematic", "score": 76},
+  {"scene": "seaside", "filter": "vivid", "score": 91},
+  {"scene": "city", "filter": "balanced", "score": 88},
+  {"scene": "city", "filter": "cinematic", "score": 93},
+  {"scene": "city", "filter": "vivid", "score": 79},
+  {"scene": "night", "filter": "balanced", "score": 74},
+  {"scene": "night", "filter": "cinematic", "score": 86},
+  {"scene": "night", "filter": "vivid", "score": 95}
+]

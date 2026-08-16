@@ -1,0 +1,37 @@
+{
+  "name": "coast-to-midnight",
+  "clips": [
+    {
+      "id": "sea",
+      "scene": "seaside",
+      "path": "C:\\Video Projects\\Beach Takes\\sea breeze.mp4",
+      "frame_time": "5.250s"
+    },
+    {
+      "id": "city",
+      "scene": "city",
+      "path": "C:\\Video Projects\\City Takes\\morning commute.mp4",
+      "frame_time": "12.500s"
+    },
+    {
+      "id": "night",
+      "scene": "night",
+      "path": "C:\\Video Projects\\Night Takes\\neon rain.mp4",
+      "frame_time": "8.750s"
+    }
+  ],
+  "filters": [
+    {
+      "name": "balanced",
+      "graph": "eq=contrast=1.04:saturation=1.06:brightness=0.01"
+    },
+    {
+      "name": "cinematic",
+      "graph": "eq=contrast=1.12:saturation=0.92:gamma=0.98"
+    },
+    {
+      "name": "vivid",
+      "graph": "eq=contrast=1.08:saturation=1.22:gamma=1.02"
+    }
+  ]
+}
